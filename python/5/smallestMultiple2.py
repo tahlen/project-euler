@@ -1,0 +1,48 @@
+def smallestMultiple(arg):
+    factorList = range(arg + 1)
+    factorList.pop(0)
+    primeList = 1
+    divides = True
+    prime = 2
+    divisorList = []
+    total = 0
+    
+    while total != arg:
+        
+        
+
+# Find next prime after input
+def findNextPrime(prime):
+
+    # Number to test if prime
+    # Start at last found prime + 1
+    nextPrime =  prime + 1
+    
+    # Loops until next prime number is found
+    while not isPrime(nextPrime):
+	nextPrime += 1
+
+    return nextPrime
+
+# Loops until a factor is found or testFactorNumber^2 is larger than testPrimeNumber
+# Return False if x < 2
+# Return False if factor is found, else True
+def isPrime(x):
+
+    if x < 2:
+        return False
+        
+    testPrimeNumber = x
+    testFactorNumber = 2
+
+    while testFactorNumber**2 <= testPrimeNumber:
+        if testPrimeNumber%testFactorNumber == 0:
+            #print("found factor: " + str(testFactorNumber))
+            return False
+        testFactorNumber += 1
+
+    return True
+
+while True:
+    #print(smallestMultiple(input()))
+    print(str(findNextPrime(input())))

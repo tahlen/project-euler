@@ -16,3 +16,4 @@ def findFibNum(maxNumber):
 
 while True:
     print('sum = ' + str(findFibNum(int(input()))))
+

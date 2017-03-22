@@ -1,0 +1,11 @@
+#def smallestMultiple(arg):
+
+def filterList(x, argList):
+    numList = []
+    for item in argList:
+        if (item % x) != 0:
+            numList.append(x)
+
+    return numList
+    
+        
